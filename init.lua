@@ -6,7 +6,7 @@ require("config.lsp")
 
 -- setup lazy
 require("config.lazy").setup_with({
-  colorscheme = colorscheme,
+	colorscheme = colorscheme,
 })
 
 -- set colorscheme

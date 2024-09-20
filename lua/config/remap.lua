@@ -36,4 +36,4 @@ vim.keymap.set("t", "<Esc>", "<C-Bslash><C-N>")
 --    end,
 --})
 
-vim.cmd[[cabbrev E Ex]]
+vim.cmd [[cabbrev E Ex]]
