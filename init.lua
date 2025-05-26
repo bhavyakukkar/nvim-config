@@ -1,4 +1,4 @@
-local colorscheme = 'base16-onedark'
+local colorscheme = 'base16-gruvbox-material-dark-hard'
 
 require("config.set")
 require("config.remap")
