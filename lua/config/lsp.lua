@@ -18,7 +18,14 @@ vim.api.nvim_create_autocmd('FileType', {
 	callback = function(args)
 		vim.lsp.start({
 			name = 'typescript-language-server',
-			cmd = { vim.fs.root(args.buf, { 'package.json' }) .. '/node_modules/.bin/typescript-language-server', '--stdio' },
+			--[[
+			cmd = {
+				vim.fs.root(args.buf, { 'package.json' }) ..
+				'/node_modules/.bin/typescript-language-server',
+				'--stdio'
+			},
+			--]]
+			cmd = { 'typescript-language-server', '--stdio' },
 			root_dir = vim.fs.root(args.buf, { 'package.json' }),
 		})
 	end,
@@ -29,7 +36,6 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = 'lua',
 	callback = function(args)
-		local projroot = vim.fs.root(args.buf, { 'init.lua' })
 		vim.lsp.start({
 			name = 'lua-language-server',
 			cmd = { 'lua-language-server', args.file },
