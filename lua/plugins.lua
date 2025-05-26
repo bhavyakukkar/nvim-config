@@ -6,7 +6,7 @@ return {
 	--telescope
 	{
 		'nvim-telescope/telescope.nvim',
-		branch = "0.1.x",
+		tag = "0.1.8",
 		dependencies = { 'nvim-lua/plenary.nvim' },
 
 		lazy = true,
@@ -14,7 +14,8 @@ return {
 			-- file picker
 			{
 				"<leader>f",
-				require("telescope.builtin").find_files, "n"
+				require("telescope.builtin").find_files,
+				"n"
 			},
 			-- open buffer picker (most recent first)
 			{
@@ -38,7 +39,15 @@ return {
 		},
 	},
 	{
+		"sphamba/smear-cursor.nvim",
+		opts = {},
+	},
+	{
+		'norcalli/nvim-colorizer.lua',
+		lazy = false,
+	},
 	-- helix-keybindings
+	{
 		dir = "~/dev/lua/nvim-plugins/selix-nvim",
 		lazy = false,
 		enabled = false,
