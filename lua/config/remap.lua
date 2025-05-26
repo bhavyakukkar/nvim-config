@@ -36,4 +36,12 @@ vim.keymap.set("t", "<Esc>", "<C-Bslash><C-N>")
 --    end,
 --})
 
+-- lsp
+vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>k", vim.lsp.buf.signature_help)
+vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>D", vim.lsp.buf.definition)
+
+-- misc
 vim.cmd [[cabbrev E Ex]]
