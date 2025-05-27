@@ -14,7 +14,7 @@ return {
 			-- file picker
 			{
 				"<leader>f",
-				require("telescope.builtin").find_files,
+				function() require("telescope.builtin").find_files() end,
 				"n"
 			},
 			-- open buffer picker (most recent first)
